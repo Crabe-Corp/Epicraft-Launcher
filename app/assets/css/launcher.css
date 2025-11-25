@@ -620,6 +620,10 @@ body, button {
     position: relative;
     right: -20px;
     transition: 0.5s ease;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 #loginButton:disabled {
     color: rgba(255, 255, 255, 0.75);
@@ -3017,7 +3021,7 @@ input:checked + .toggleSwitchSlider:before {
     min-width: 135px;
     font-weight: 900;
     letter-spacing: 1px;
-    text-shadow: 0px 0px 20px black;
+    text-shadow: 0px 0px 0px black;
     position: absolute;
     right: 95px;
     text-align: right;
@@ -3242,7 +3246,6 @@ input:checked + .toggleSwitchSlider:before {
     border-radius: 4px;
     padding: 5px 10px;
     z-index: 1;
-    font-family: 'Avenir Medium';
     font-size: 12px;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
     bottom: calc(100% + 15px);
@@ -3254,9 +3257,9 @@ input:checked + .toggleSwitchSlider:before {
 #mojangStatusTooltip:after {
     content: " ";
     position: absolute;
-    left: 50%;
-    top: 100%;
-    margin-left: -5px;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
     border-width: 5px;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
@@ -3386,11 +3389,17 @@ input:checked + .toggleSwitchSlider:before {
 * Landing View (Bottom Styles) | Right Content
 * * */
 
-/* Main launch content container. */
-#landingContainer > #lower > #right #launch_content {
-    position: relative;
-    top: 25px;
-    display: inline-flex;
+/* Main launch content container, centered independently of #lower. */
+#launch_content {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    z-index: 100;
 }
 
 /* The launch button. */
@@ -3398,6 +3407,7 @@ input:checked + .toggleSwitchSlider:before {
     background: none;
     border: none;
     cursor: pointer;
+    align-items: center;
     font-weight: 900;
     letter-spacing: 2px;
     text-shadow: 0px 0px 0px #bebcbb;
@@ -3405,6 +3415,7 @@ input:checked + .toggleSwitchSlider:before {
     padding: 0px;
     transition: 0.25s ease;
     outline: none;
+    position: relative;
 }
 #launch_button:hover,
 #launch_button:focus {
@@ -3422,9 +3433,16 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Launch details main container, hidden until launch processing begins. */
 #launch_details {
-    position: relative;
-    top: 25px;
-    display: none;
+    /* Mêmes coordonnées que le launch_content pour qu'ils se superposent */
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: none; /* Reste caché par défaut */
+    flex-direction: column;
+    align-items: center;
+    z-index: 101; /* Au-dessus du launch_content */
 }
  
 /* Left side of launch details container, displays percentage and a divider. */
@@ -3459,6 +3477,7 @@ input:checked + .toggleSwitchSlider:before {
     line-height: 24px;
     padding: 0px;
     transition: 0.25s ease;
+    font-size: 11px;
 }
 #server_selection_button:hover,
 #server_selection_button:focus {
@@ -3510,7 +3529,6 @@ input:checked + .toggleSwitchSlider:before {
     justify-content: center;
     width: 100%;
     height: calc(100% - 22px);
-    background: rgba(0, 0, 0, 0.50);
 }
 
 /* Main overlay content. */
