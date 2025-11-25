@@ -7,7 +7,7 @@ const logger = LoggerUtil.getLogger('ConfigManager')
 
 const sysRoot = process.env.APPDATA || (process.platform == 'darwin' ? process.env.HOME + '/Library/Application Support' : process.env.HOME)
 
-const dataPath = path.join(sysRoot, '.helioslauncher')
+const dataPath = path.join(sysRoot, '.epicraftlauncher')
 
 const launcherDir = require('@electron/remote').app.getPath('userData')
 
@@ -80,7 +80,7 @@ const DEFAULT_CONFIG = {
         game: {
             resWidth: 1280,
             resHeight: 720,
-            fullscreen: false,
+            fullscreen: true,
             autoConnect: true,
             launchDetached: true
         },
