@@ -1,0 +1,1510 @@
+{
+  "version": "1.0.0",
+  "rss": "<LINK TO RSS FEED>",
+  "discord": {
+    "clientId": "<FILL IN OR REMOVE DISCORD OBJECT>",
+    "smallImageText": "<FILL IN OR REMOVE DISCORD OBJECT>",
+    "smallImageKey": "<FILL IN OR REMOVE DISCORD OBJECT>"
+  },
+  "servers": [
+    {
+      "id": "Epicraft-1.20.1",
+      "name": "Epicraft (Minecraft 1.20.1)",
+      "description": "Epicraft Running Minecraft 1.20.1 (Forge v47.4.0)",
+      "icon": null,
+      "version": "1.0.0",
+      "address": "localhost:25565",
+      "minecraftVersion": "1.20.1",
+      "discord": {
+        "shortId": "<FILL IN OR REMOVE DISCORD OBJECT>",
+        "largeImageText": "<FILL IN OR REMOVE DISCORD OBJECT>",
+        "largeImageKey": "<FILL IN OR REMOVE DISCORD OBJECT>"
+      },
+      "mainServer": false,
+      "autoconnect": false,
+      "modules": [
+        {
+          "id": "net.minecraftforge:lowcodelanguage:1.20.1-47.4.0",
+          "name": "Minecraft Forge (lowcodelanguage)",
+          "type": "ForgeHosted",
+          "classpath": true,
+          "artifact": {
+            "size": 7399,
+            "MD5": "a839d5603a05491f84f6c36284ab0ea8",
+            "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/lowcodelanguage/1.20.1-47.4.0/lowcodelanguage-1.20.1-47.4.0.jar"
+          },
+          "subModules": [
+            {
+              "id": "1.20.1-47.4.0",
+              "name": "Minecraft Forge (version.json)",
+              "type": "VersionManifest",
+              "artifact": {
+                "size": 16612,
+                "MD5": "029daa8b97e10cedd4d6726a563379ab",
+                "url": "http://downloads.epicraft.tech/repo/versions/1.20.1-forge-47.4.0/1.20.1-forge-47.4.0.json"
+              }
+            },
+            {
+              "id": "net.minecraftforge:fmlcore:1.20.1-47.4.0",
+              "name": "Minecraft Forge (fmlcore)",
+              "type": "Library",
+              "classpath": true,
+              "artifact": {
+                "size": 118914,
+                "MD5": "bc798cdec9ec7eeb3354b550d5e67652",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/fmlcore/1.20.1-47.4.0/fmlcore-1.20.1-47.4.0.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraftforge:javafmllanguage:1.20.1-47.4.0",
+              "name": "Minecraft Forge (javafmllanguage)",
+              "type": "Library",
+              "classpath": true,
+              "artifact": {
+                "size": 16855,
+                "MD5": "10ca1edc0a62ea799c4327bfc44e5ad6",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/javafmllanguage/1.20.1-47.4.0/javafmllanguage-1.20.1-47.4.0.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraftforge:mclanguage:1.20.1-47.4.0",
+              "name": "Minecraft Forge (mclanguage)",
+              "type": "Library",
+              "classpath": true,
+              "artifact": {
+                "size": 4998,
+                "MD5": "cd3d6af64b394583aa83090915469f9e",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/mclanguage/1.20.1-47.4.0/mclanguage-1.20.1-47.4.0.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraftforge:forge:1.20.1-47.4.0:universal",
+              "name": "Minecraft Forge (universal jar)",
+              "type": "Library",
+              "classpath": false,
+              "artifact": {
+                "size": 2776081,
+                "MD5": "f373b63ab9bfe53f7b35aaa425afa136",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-universal.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraftforge:forge:1.20.1-47.4.0:client",
+              "name": "Minecraft Forge (client jar)",
+              "type": "Library",
+              "classpath": false,
+              "artifact": {
+                "size": 4826828,
+                "MD5": "1940b09c4b066287963bde17aa375cec",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-client.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraft:client:1.20.1-20230612.114412:srg",
+              "name": "Minecraft Forge (client srg)",
+              "type": "Library",
+              "classpath": false,
+              "artifact": {
+                "size": 18842082,
+                "MD5": "8bfacfba4f54cda741019756165c5ecf",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-srg.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraft:client:1.20.1-20230612.114412:slim",
+              "name": "Minecraft Forge (client slim)",
+              "type": "Library",
+              "classpath": false,
+              "artifact": {
+                "size": 12592249,
+                "MD5": "28edebec7b5a007bc9961ee9bab4d764",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-slim.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraft:client:1.20.1-20230612.114412:extra",
+              "name": "Minecraft Forge (client extra)",
+              "type": "Library",
+              "classpath": false,
+              "artifact": {
+                "size": 10436626,
+                "MD5": "da6bb1a2c23108392fd6c103da40867c",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-extra.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "cpw.mods:securejarhandler:2.1.10",
+              "name": "Minecraft Forge (securejarhandler)",
+              "type": "Library",
+              "artifact": {
+                "size": 88749,
+                "MD5": "d9ff48d1c68388270388b803fa42611e",
+                "url": "http://downloads.epicraft.tech/repo/lib/cpw/mods/securejarhandler/2.1.10/securejarhandler-2.1.10.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm:9.7.1",
+              "name": "Minecraft Forge (asm)",
+              "type": "Library",
+              "artifact": {
+                "size": 126093,
+                "MD5": "e2cdd32d198ad31427d298eee9d39d8d",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-commons:9.7.1",
+              "name": "Minecraft Forge (asm-commons)",
+              "type": "Library",
+              "artifact": {
+                "size": 73459,
+                "MD5": "8344aea3c8b7d707e9d35a62710e77c9",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-tree:9.7.1",
+              "name": "Minecraft Forge (asm-tree)",
+              "type": "Library",
+              "artifact": {
+                "size": 51939,
+                "MD5": "e85029f613b6469989cc7cf53fe06b74",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-util:9.7.1",
+              "name": "Minecraft Forge (asm-util)",
+              "type": "Library",
+              "artifact": {
+                "size": 94519,
+                "MD5": "36d373a9cd6cad9b35db9f984c6b4bbb",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/ow2/asm/asm-util/9.7.1/asm-util-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-analysis:9.7.1",
+              "name": "Minecraft Forge (asm-analysis)",
+              "type": "Library",
+              "artifact": {
+                "size": 35126,
+                "MD5": "4cd9e7178dfb85371bba3077e40cd514",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/ow2/asm/asm-analysis/9.7.1/asm-analysis-9.7.1.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:accesstransformers:8.0.4",
+              "name": "Minecraft Forge (accesstransformers)",
+              "type": "Library",
+              "artifact": {
+                "size": 77756,
+                "MD5": "f0d3533f9437ba4428eaee9f28f7ecd9",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/accesstransformers/8.0.4/accesstransformers-8.0.4.jar"
+              }
+            },
+            {
+              "id": "org.antlr:antlr4-runtime:4.9.1",
+              "name": "Minecraft Forge (antlr4-runtime)",
+              "type": "Library",
+              "artifact": {
+                "size": 337868,
+                "MD5": "0dcc4b860d5d8d2852ab94d58c56ca2d",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/antlr/antlr4-runtime/4.9.1/antlr4-runtime-4.9.1.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:eventbus:6.0.5",
+              "name": "Minecraft Forge (eventbus)",
+              "type": "Library",
+              "artifact": {
+                "size": 53985,
+                "MD5": "2a6245210b446b2144071e71ca13432b",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/eventbus/6.0.5/eventbus-6.0.5.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:forgespi:7.0.1",
+              "name": "Minecraft Forge (forgespi)",
+              "type": "Library",
+              "artifact": {
+                "size": 29831,
+                "MD5": "bd34d20287dc95201fe9475a8bbc2540",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/forgespi/7.0.1/forgespi-7.0.1.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:coremods:5.2.4",
+              "name": "Minecraft Forge (coremods)",
+              "type": "Library",
+              "artifact": {
+                "size": 31872,
+                "MD5": "5295505357ba9b98450c5e3121f82191",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/coremods/5.2.4/coremods-5.2.4.jar"
+              }
+            },
+            {
+              "id": "cpw.mods:modlauncher:10.0.9",
+              "name": "Minecraft Forge (modlauncher)",
+              "type": "Library",
+              "artifact": {
+                "size": 130343,
+                "MD5": "07507d18d72661f8ae6a5da75bbf35be",
+                "url": "http://downloads.epicraft.tech/repo/lib/cpw/mods/modlauncher/10.0.9/modlauncher-10.0.9.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:unsafe:0.2.0",
+              "name": "Minecraft Forge (unsafe)",
+              "type": "Library",
+              "artifact": {
+                "size": 2834,
+                "MD5": "2d1016ebe4c1a63dd50a59d26bd12db1",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/unsafe/0.2.0/unsafe-0.2.0.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:mergetool:1.1.5:api",
+              "name": "Minecraft Forge (mergetool)",
+              "type": "Library",
+              "artifact": {
+                "size": 2572,
+                "MD5": "8df9c5bf87d004ddb884eca99bc2a4b1",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/mergetool/1.1.5/mergetool-1.1.5-api.jar"
+              }
+            },
+            {
+              "id": "com.electronwill.night-config:core:3.6.4",
+              "name": "Minecraft Forge (core)",
+              "type": "Library",
+              "artifact": {
+                "size": 199834,
+                "MD5": "d83ab07267e402131fb93d899a57f5cd",
+                "url": "http://downloads.epicraft.tech/repo/lib/com/electronwill/night-config/core/3.6.4/core-3.6.4.jar"
+              }
+            },
+            {
+              "id": "com.electronwill.night-config:toml:3.6.4",
+              "name": "Minecraft Forge (toml)",
+              "type": "Library",
+              "artifact": {
+                "size": 31816,
+                "MD5": "bc95d0709fff2164b01fd09fbc988be8",
+                "url": "http://downloads.epicraft.tech/repo/lib/com/electronwill/night-config/toml/3.6.4/toml-3.6.4.jar"
+              }
+            },
+            {
+              "id": "org.apache.maven:maven-artifact:3.8.5",
+              "name": "Minecraft Forge (maven-artifact)",
+              "type": "Library",
+              "artifact": {
+                "size": 58077,
+                "MD5": "ce473b0d9fbfd10fe147f03fe8707d67",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/apache/maven/maven-artifact/3.8.5/maven-artifact-3.8.5.jar"
+              }
+            },
+            {
+              "id": "net.jodah:typetools:0.6.3",
+              "name": "Minecraft Forge (typetools)",
+              "type": "Library",
+              "artifact": {
+                "size": 18281,
+                "MD5": "d4a375bf382f726cf1a650ccb38a736c",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/jodah/typetools/0.6.3/typetools-0.6.3.jar"
+              }
+            },
+            {
+              "id": "net.minecrell:terminalconsoleappender:1.2.0",
+              "name": "Minecraft Forge (terminalconsoleappender)",
+              "type": "Library",
+              "artifact": {
+                "size": 15977,
+                "MD5": "679363fa893293791e55a21f81342f87",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecrell/terminalconsoleappender/1.2.0/terminalconsoleappender-1.2.0.jar"
+              }
+            },
+            {
+              "id": "org.jline:jline-reader:3.12.1",
+              "name": "Minecraft Forge (jline-reader)",
+              "type": "Library",
+              "artifact": {
+                "size": 150765,
+                "MD5": "a2e7b012cd9802f83321187409174a94",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/jline/jline-reader/3.12.1/jline-reader-3.12.1.jar"
+              }
+            },
+            {
+              "id": "org.jline:jline-terminal:3.12.1",
+              "name": "Minecraft Forge (jline-terminal)",
+              "type": "Library",
+              "artifact": {
+                "size": 211712,
+                "MD5": "3c52be5ab5e3847be6e62269de924cb0",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/jline/jline-terminal/3.12.1/jline-terminal-3.12.1.jar"
+              }
+            },
+            {
+              "id": "org.spongepowered:mixin:0.8.5",
+              "name": "Minecraft Forge (mixin)",
+              "type": "Library",
+              "artifact": {
+                "size": 1089277,
+                "MD5": "19b3a2ae9e445a6e626fd7d1648cfcb8",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar"
+              }
+            },
+            {
+              "id": "org.openjdk.nashorn:nashorn-core:15.4",
+              "name": "Minecraft Forge (nashorn-core)",
+              "type": "Library",
+              "artifact": {
+                "size": 2167292,
+                "MD5": "a9b3360e6a486cf62c1952c7816b7d97",
+                "url": "http://downloads.epicraft.tech/repo/lib/org/openjdk/nashorn/nashorn-core/15.4/nashorn-core-15.4.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:JarJarSelector:0.3.19",
+              "name": "Minecraft Forge (JarJarSelector)",
+              "type": "Library",
+              "artifact": {
+                "size": 17374,
+                "MD5": "2bb6cbe0e6c6fbcd8f92d2e6b1ea678e",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/JarJarSelector/0.3.19/JarJarSelector-0.3.19.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:JarJarMetadata:0.3.19",
+              "name": "Minecraft Forge (JarJarMetadata)",
+              "type": "Library",
+              "artifact": {
+                "size": 15895,
+                "MD5": "9633546d299d4282ca68d10582be1c8f",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/JarJarMetadata/0.3.19/JarJarMetadata-0.3.19.jar"
+              }
+            },
+            {
+              "id": "cpw.mods:bootstraplauncher:1.1.2",
+              "name": "Minecraft Forge (bootstraplauncher)",
+              "type": "Library",
+              "artifact": {
+                "size": 8284,
+                "MD5": "48f5255aa337344c467c0150d347813d",
+                "url": "http://downloads.epicraft.tech/repo/lib/cpw/mods/bootstraplauncher/1.1.2/bootstraplauncher-1.1.2.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:JarJarFileSystems:0.3.19",
+              "name": "Minecraft Forge (JarJarFileSystems)",
+              "type": "Library",
+              "artifact": {
+                "size": 32195,
+                "MD5": "c2be1a88b63eb1b58b00ab6e498cd97d",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/JarJarFileSystems/0.3.19/JarJarFileSystems-0.3.19.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:fmlloader:1.20.1-47.4.0",
+              "name": "Minecraft Forge (fmlloader)",
+              "type": "Library",
+              "artifact": {
+                "size": 267079,
+                "MD5": "5b26aba9f44796d54094022c1e73a49e",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/fmlloader/1.20.1-47.4.0/fmlloader-1.20.1-47.4.0.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:fmlearlydisplay:1.20.1-47.4.0",
+              "name": "Minecraft Forge (fmlearlydisplay)",
+              "type": "Library",
+              "artifact": {
+                "size": 170517,
+                "MD5": "68747d96f635b0a0dc9e070d3596a562",
+                "url": "http://downloads.epicraft.tech/repo/lib/net/minecraftforge/fmlearlydisplay/1.20.1-47.4.0/fmlearlydisplay-1.20.1-47.4.0.jar"
+              }
+            }
+          ]
+        },
+        {
+          "id": "net.geforcemods:securitycraft:1.10.0.1@jar",
+          "name": "SecurityCraft",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4648724,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/[1.20.1]%20SecurityCraft%20v1.10.0.1.jar",
+            "MD5": "9ef0bc4940bf472feff9592f528782ea"
+          }
+        },
+        {
+          "id": "com.aetherteam:aether:1.20.1-1.5.2-neoforge@jar",
+          "name": "The Aether",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 39746319,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/aether-1.20.1-1.5.2-neoforge.jar",
+            "MD5": "3508066e170a010e8a466eea05579b85"
+          }
+        },
+        {
+          "id": "net.allthemods:alltheores:2.2.4@jar",
+          "name": "AllTheOres",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1073852,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/alltheores-1.20.1-47.1.3-2.2.4.jar",
+            "MD5": "1e40d66af7014dc35845db4f1bfb4dce"
+          }
+        },
+        {
+          "id": "com.starfish_studios:another_furniture:1.20.1-3.0.4@jar",
+          "name": "Another Furniture",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2463633,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/another_furniture-forge-1.20.1-3.0.4.jar",
+            "MD5": "cc1fc7aaac4322d79446e3b5243cfe70"
+          }
+        },
+        {
+          "id": "squeek.appleskin:appleskin:2.5.1+mc1.20.1@jar",
+          "name": "AppleSkin",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 47428,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/appleskin-forge-mc1.20.1-2.5.1.jar",
+            "MD5": "dae63cea9c951dda542a4005ceef3953"
+          }
+        },
+        {
+          "id": "dev.architectury:architectury:9.2.14@jar",
+          "name": "Architectury",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 580602,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/architectury-9.2.14-forge.jar",
+            "MD5": "76b40d407b6bf0257dd1dab6d3d395d5"
+          }
+        },
+        {
+          "id": "earth.terrarium:athena:3.1.2@jar",
+          "name": "Athena",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 91808,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/athena-forge-1.20.1-3.1.2.jar",
+            "MD5": "2086e326e8f0ff2f8d7d05c66c291484"
+          }
+        },
+        {
+          "id": "com.leclowndu93150:baguettelib:1.1.0@jar",
+          "name": "BaguetteLib",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 30314,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/baguettelib-1.20.1-Forge-1.1.0.jar",
+            "MD5": "74448bf96f648170cc03ab7bee6a6e3d"
+          }
+        },
+        {
+          "id": "net.blay09.mods:balm:7.3.34@jar",
+          "name": "Balm",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 597277,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/balm-forge-1.20.1-7.3.34-all.jar",
+            "MD5": "46042f0775ca50a92f1a489e4527827c"
+          }
+        },
+        {
+          "id": "betteradvancements:betteradvancements:0.4.2.25@jar",
+          "name": "Better Advancements",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 98124,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/BetterAdvancements-Forge-1.20.1-0.4.2.25.jar",
+            "MD5": "30f0ea1a5da2f22cb25d7794544b3c1f"
+          }
+        },
+        {
+          "id": "com.ldtteam.blockui.mod:blockui:1.20.1-1.0.193@jar",
+          "name": "UI Library Mod",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 390903,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/blockui-1.20.1-1.0.193.jar",
+            "MD5": "b22f19a48bb2b68e1a45ab7c76e48416"
+          }
+        },
+        {
+          "id": "top.theillusivec4:caelus:3.2.0+1.20.1@jar",
+          "name": "Caelus API",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 40125,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/caelus-forge-3.2.0+1.20.1.jar",
+            "MD5": "e37854c44b1849b753afc4a205f31b46"
+          }
+        },
+        {
+          "id": "earth.terrarium:chipped:3.0.7@jar",
+          "name": "Chipped",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 15060263,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/chipped-forge-1.20.1-3.0.7.jar",
+            "MD5": "c6c76e78805b357757bf47b04c7286e7"
+          }
+        },
+        {
+          "id": "com.blamejared:clumps:12.0.0.4@jar",
+          "name": "Clumps",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 20299,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/Clumps-forge-1.20.1-12.0.0.4.jar",
+            "MD5": "c9efc71827df6ab51e8dd0e40c3d4975"
+          }
+        },
+        {
+          "id": "codechicken.lib:codechickenlib:4.4.0.516@jar",
+          "name": "CodeChicken Lib",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1472390,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/CodeChickenLib-1.20.1-4.4.0.516-universal.jar",
+            "MD5": "5c2f4b34587c6596d1d50e5bf76ee448"
+          }
+        },
+        {
+          "id": "com.supermartijn642:connectedglass:1.1.14@jar",
+          "name": "Connected Glass",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 873714,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/connectedglass-1.1.14-forge-mc1.20.1.jar",
+            "MD5": "7b7a482c48dc0e76120f0bd91af1e01a"
+          }
+        },
+        {
+          "id": "com.copycatsplus:copycats:3.0.2+mc.1.20.1-forge@jar",
+          "name": "Create: Copycats+",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1988341,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/copycats-3.0.2+mc.1.20.1-forge.jar",
+            "MD5": "b0cf6993f60b27183e72800454e26218"
+          }
+        },
+        {
+          "id": "lain.mods.cos.init:cosmeticarmorreworked:1.20.1-v1a@jar",
+          "name": "CosmeticArmorReworked",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 88752,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/cosmeticarmorreworked-1.20.1-v1a.jar",
+            "MD5": "2454075e9a25cbadc0fce66502e3261d"
+          }
+        },
+        {
+          "id": "com.hypherionmc:craterlib:2.1.5@jar",
+          "name": "CraterLib",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2011855,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/CraterLib-Forge-1.20-2.1.5.jar",
+            "MD5": "990c6cbaab8ab67a62214ec673f9d58d"
+          }
+        },
+        {
+          "id": "com.simibubi:create:6.0.6@jar",
+          "name": "Create",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 18764522,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/create-1.20.1-6.0.6.jar",
+            "MD5": "0bdb2789d1708a9de227c8ef05a830d9"
+          }
+        },
+        {
+          "id": "com.mrh0:createaddition:1.20.1-1.3.2@jar",
+          "name": "Create Crafts & Additions",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1583476,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/createaddition-1.20.1-1.3.2.jar",
+            "MD5": "0a70304b24fed06ef44470b613cdb251"
+          }
+        },
+        {
+          "id": "com.github.talrey:createdeco:2.0.3-1.20.1-forge@jar",
+          "name": "Create Deco",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3509013,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/createdeco-2.0.3-1.20.1-forge.jar",
+            "MD5": "3e0976b862fd087493c7356f623f5cd7"
+          }
+        },
+        {
+          "id": "net.cristellib:cristellib:1.1.6@jar",
+          "name": "Cristel Lib",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 431318,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/cristellib-1.1.6-forge.jar",
+            "MD5": "b52e8b225a34abab9300049c85f6855a"
+          }
+        },
+        {
+          "id": "com.cupboard:cupboard:1.20.1-2.7@jar",
+          "name": "Cupboard utilities",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 25983,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/cupboard-1.20.1-2.7.jar",
+            "MD5": "3620912474f47bf58d1fe5bfe133763a"
+          }
+        },
+        {
+          "id": "top.theillusivec4:curios:5.14.1+1.20.1@jar",
+          "name": "Curios API",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 398066,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/curios-forge-5.14.1+1.20.1.jar",
+            "MD5": "2fdcc97cbc66c4b2492b407c792e7159"
+          }
+        },
+        {
+          "id": "com.razz:decocraft:3.0.4-1.20.1@jar",
+          "name": "Decocraft",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 94319937,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/decocraft-3.0.4-1.20.1-slim.jar",
+            "MD5": "27f512f2b099c8955f87ca5c22fc9cb5"
+          }
+        },
+        {
+          "id": "com.ldtteam.domumornamentum:domum_ornamentum:1.20.1-1.0.186-RELEASE@jar",
+          "name": "Domum Ornamentum",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1099334,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/domum_ornamentum-1.20.1-1.0.186-RELEASE-universal.jar",
+            "MD5": "0e7bf5e2a1b9b449885e8a2f40910789"
+          }
+        },
+        {
+          "id": "xiroc.dungeoncrawl:dungeoncrawl:2.3.15@jar",
+          "name": "Dungeon Crawl",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 758123,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/Dungeon%20Crawl-1.20.1-2.3.15.jar",
+            "MD5": "f53b840d17a5805630ec199087babe4b"
+          }
+        },
+        {
+          "id": "com.illusivesoulworks:elytraslot:6.4.4+1.20.1@jar",
+          "name": "Elytra Slot",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 100660,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/elytraslot-forge-6.4.4+1.20.1.jar",
+            "MD5": "54fd8868bbff9fc88befe9b32555dfe8"
+          }
+        },
+        {
+          "id": "me.jellysquid.mods.sodium.client:embeddium:0.3.31+mc1.20.1@jar",
+          "name": "Embeddium",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1320675,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/embeddium-0.3.31+mc1.20.1.jar",
+            "MD5": "1dfb2ee49ce9ad5d484ff3eea0d628b7"
+          }
+        },
+        {
+          "id": "io.github.kosmx.emotes:emotecraft:2.2.7-b.build.50@jar",
+          "name": "Emotecraft",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 680255,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge.jar",
+            "MD5": "636c62379cd7c5201a70fd457808e331"
+          }
+        },
+        {
+          "id": "codechicken.enderstorage:enderstorage:2.11.0.188@jar",
+          "name": "EnderStorage",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 246017,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/EnderStorage-1.20.1-2.11.0.188-universal.jar",
+            "MD5": "8c6cc85f76b45b52d5feef1baa10f764"
+          }
+        },
+        {
+          "id": "de.cheaterpaul:fallingleaves:2.1.2@jar",
+          "name": "Fallingleaves",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 124212,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/fallingleaves-1.20.1-2.1.2.jar",
+            "MD5": "721d92a83d7518e8515dbd499eda03cd"
+          }
+        },
+        {
+          "id": "vectorwing.farmersdelight:farmersdelight:1.20.1-1.2.9@jar",
+          "name": "Farmer's Delight",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2978080,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/FarmersDelight-1.20.1-1.2.9.jar",
+            "MD5": "71e177a98e0e6f399761ad00e978d177"
+          }
+        },
+        {
+          "id": "com.farsight:farsight_view:1.20.1-4.5@jar",
+          "name": "Farsight mod",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 441356,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/farsight-1.20.1-4.5.jar",
+            "MD5": "92abe14e6a34c2b93e0074c0583cd25c"
+          }
+        },
+        {
+          "id": "com.fastasyncworldsave:fastasyncworldsave:1.20.1-2.6@jar",
+          "name": "Fastasyncworldsave mod",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 14812,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/fastasyncworldsave-1.20.1-2.6.jar",
+            "MD5": "6c24d9c3cc17e4e5052c21c2b2d188ad"
+          }
+        },
+        {
+          "id": "net.olafski:fastleafdecay:32@jar",
+          "name": "Fast Leaf Decay",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 9835,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/FastLeafDecay-32.jar",
+            "MD5": "20df3e3525622d6ea38a243be828ef38"
+          }
+        },
+        {
+          "id": "dev.ftb.mods:ftbchunks:2001.3.6@jar",
+          "name": "FTB Chunks",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1158842,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/ftb-chunks-forge-2001.3.6.jar",
+            "MD5": "64af750c0cbcadd4b27fb58236654814"
+          }
+        },
+        {
+          "id": "dev.ftb.mods:ftbessentials:2001.2.3@jar",
+          "name": "FTB Essentials",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 156203,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/ftb-essentials-forge-2001.2.3.jar",
+            "MD5": "5d3acae1dc695190604bd4a2f5423d06"
+          }
+        },
+        {
+          "id": "dev.ftb.mods:ftblibrary:2001.2.10@jar",
+          "name": "FTB Library",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 791875,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/ftb-library-forge-2001.2.10.jar",
+            "MD5": "ae5292127a5a0d85d793bbce8f1e24dd"
+          }
+        },
+        {
+          "id": "dev.ftb.mods:ftbquests:2001.4.14@jar",
+          "name": "FTB Quests",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1222711,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/ftb-quests-forge-2001.4.14.jar",
+            "MD5": "a02b8885bc618a54f41885ddb24e2d8f"
+          }
+        },
+        {
+          "id": "dev.ftb.mods:ftbteams:2001.3.1@jar",
+          "name": "FTB Teams",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 248592,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/ftb-teams-forge-2001.3.1.jar",
+            "MD5": "98efb58ba7cecfb39034544eced0389f"
+          }
+        },
+        {
+          "id": "dev.ftb.mods:ftbultimine:2001.1.7@jar",
+          "name": "FTB Ultimine",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 114945,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/ftb-ultimine-forge-2001.1.7.jar",
+            "MD5": "79187bd77a9671a94d7cbf8a1aa20ec3"
+          }
+        },
+        {
+          "id": "com.supermartijn642:fusion:1.2.11+a@jar",
+          "name": "Fusion",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 544250,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/fusion-1.2.11a-forge-mc1.20.1.jar",
+            "MD5": "709b729df7478057bc30c15a6091b274"
+          }
+        },
+        {
+          "id": "de.maxhenkel:gravestone:1.20.1-1.0.33@jar",
+          "name": "Gravestone Mod",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 317148,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/gravestone-forge-1.20.1-1.0.33.jar",
+            "MD5": "238293f49477db2c0664f3cad352dc54"
+          }
+        },
+        {
+          "id": "com.leclowndu93150.corpsecurioscompat:gravestonecurioscompat:3.0.0@jar",
+          "name": "Gravestonecurioscompat",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 12430,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/gravestonecurioscompat-1.20.x-Forge-3.0.0.jar",
+            "MD5": "5e4945677fc2466b0417e98a5a2b61e3"
+          }
+        },
+        {
+          "id": "com.progwml6:ironchest:1.20.1-14.4.4@jar",
+          "name": "Iron Chests",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 311290,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/ironchest-1.20.1-14.4.4.jar",
+            "MD5": "078fbc43b289995ca4a8cced59bbf0ef"
+          }
+        },
+        {
+          "id": "mezz.jei:jei:15.20.0.112@jar",
+          "name": "Just Enough Items",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1385600,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/jei-1.20.1-forge-15.20.0.112.jar",
+            "MD5": "c899d5b549ace1e9fa46700c778c3809"
+          }
+        },
+        {
+          "id": "com.mrbysco:justenoughprofessions:3.0.1@jar",
+          "name": "Just Enough Professions (JEP)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 24607,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/JustEnoughProfessions-forge-1.20.1-3.0.1.jar",
+            "MD5": "1b5434032350a82a2be5da0b2fed7947"
+          }
+        },
+        {
+          "id": "jeresources:jeresources:1.4.0.247@jar",
+          "name": "Just Enough Resources",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 276231,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/JustEnoughResources-1.20.1-1.4.0.247.jar",
+            "MD5": "bd7166a2e9361ef5e8b616edfa2028f4"
+          }
+        },
+        {
+          "id": "generated.forgemod:kotlinforforge:4.11.0-all@jar",
+          "name": "Kotlinforforge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 7193768,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/kotlinforforge-4.11.0-all.jar",
+            "MD5": "417caa90d17dc86cf7d24b802c2a5c56"
+          }
+        },
+        {
+          "id": "dev.latvian.mods.kubejs.create:kubejs_create:2001.3.0-build.8@jar",
+          "name": "KubeJS Create",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 30960,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/kubejs-create-forge-2001.3.0-build.8.jar",
+            "MD5": "c76f71ba6d16e6fe50e76b1862b58dff"
+          }
+        },
+        {
+          "id": "dev.latvian.mods:kubejs:2001.6.5-build.16@jar",
+          "name": "KubeJS",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1654660,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/kubejs-forge-2001.6.5-build.16.jar",
+            "MD5": "f4c6924bef764748d26ee51e4d4c0b00"
+          }
+        },
+        {
+          "id": "com.github.l_ender:cataclysm:3.16@jar",
+          "name": "Cataclysm",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 127993805,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/L_Enders_Cataclysm-3.16.jar",
+            "MD5": "de747fb259b761f7b872654516fa27b3"
+          }
+        },
+        {
+          "id": "com.github.l_ender:lionfishapi:2.4-Fix@jar",
+          "name": "LionfishAPI",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 162767,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/lionfishapi-2.4-Fix.jar",
+            "MD5": "81efd7c198c3c7036c77c79cae764ed4"
+          }
+        },
+        {
+          "id": "com.almostreliable:lootjs:1.20.1-2.13.0@jar",
+          "name": "LootJS",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 242227,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/lootjs-forge-1.20.1-2.13.0.jar",
+            "MD5": "1ddae5f49ca3200d67bcd32313875e19"
+          }
+        },
+        {
+          "id": "noobanidus.mods:lootr:0.7.35.92@jar",
+          "name": "Lootr",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 458609,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/lootr-forge-1.20-0.7.35.92.jar",
+            "MD5": "46f8cc588def48fc8971cdaae64b40ac"
+          }
+        },
+        {
+          "id": "yalter.mousetweaks:mousetweaks:2.25.1@jar",
+          "name": "Mouse Tweaks",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 76237,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/MouseTweaks-forge-mc1.20.1-2.25.1.jar",
+            "MD5": "ce4b5bbb9ef6a7905c458ab599ef4cb2"
+          }
+        },
+        {
+          "id": "com.chaosthedude:naturescompass:1.20.1-1.11.2-forge@jar",
+          "name": "Nature's Compass",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 215119,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/NaturesCompass-1.20.1-1.11.2-forge.jar",
+            "MD5": "7c05072645b1aae529b1e38c74b87c4c"
+          }
+        },
+        {
+          "id": "com.mrbysco.neoauth:neo_auth:1.0.3@jar",
+          "name": "NeoAuth",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 50687,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/NeoAuth-1.20.1-1.0.3.jar",
+            "MD5": "5e9c443ee9fdc1c0b440e8a7fccebfeb"
+          }
+        },
+        {
+          "id": "net.blay09.mods:netherportalfix:13.0.1@jar",
+          "name": "NetherPortalFix",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 217831,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/netherportalfix-forge-1.20-13.0.1.jar",
+            "MD5": "f5efd2c259b0538da0f62bb2d9dc2106"
+          }
+        },
+        {
+          "id": "dev.kosmx.playeranim:playeranimator:1.0.2-rc1+1.20@jar",
+          "name": "Player Animator",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 181437,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+            "MD5": "46f8554181d4d240075ea4919d01fd01"
+          }
+        },
+        {
+          "id": "com.illusivesoulworks:polymorph:0.49.10+1.20.1@jar",
+          "name": "Polymorph",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 299601,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/polymorph-forge-0.49.10+1.20.1.jar",
+            "MD5": "8e93675b33a89243d27f272f84e88338"
+          }
+        },
+        {
+          "id": "xyz.iwolfking.rechiseledchipped:rechiseled_chipped:1.2@jar",
+          "name": "Rechiseled: Chipped",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 197497,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/rechiseled_chipped-1.2.1-1.20.1.jar",
+            "MD5": "8ae1a8c49a537ac72ec58fc7759d5578"
+          }
+        },
+        {
+          "id": "com.supermartijn642:rechiseled:1.1.6@jar",
+          "name": "Rechiseled",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3600460,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/rechiseled-1.1.6-forge-mc1.20.jar",
+            "MD5": "bf5a3b3264d2eb5e12ac6d9b0fcc1f90"
+          }
+        },
+        {
+          "id": "com.supermartijn642.rechiseled.create:rechiseledcreate:1.0.2+b@jar",
+          "name": "Rechiseled: Create",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 674019,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/rechiseledcreate-1.0.2b-forge-mc1.20.jar",
+            "MD5": "0c521408295585d1c5c109daea8cda00"
+          }
+        },
+        {
+          "id": "net.regions_unexplored:regions_unexplored:0.5.6@jar",
+          "name": "Regions Unexplored",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 5726781,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/RegionsUnexploredForge-0.5.6+1.20.1.jar",
+            "MD5": "82c3073f606044e7b56d432d324ca480"
+          }
+        },
+        {
+          "id": "com.teamresourceful:resourcefullib:2.1.29@jar",
+          "name": "Resourceful Lib",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 432753,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/resourcefullib-forge-1.20.1-2.1.29.jar",
+            "MD5": "a040c6cc86f653fddf280ff3af9068f0"
+          }
+        },
+        {
+          "id": "dev.latvian.mods.rhino.mod:rhino:2001.2.3-build.10@jar",
+          "name": "Rhino",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1798244,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/rhino-forge-2001.2.3-build.10.jar",
+            "MD5": "59387620b0ef6becbff02c7c1636ad3e"
+          }
+        },
+        {
+          "id": "com.blamejared:searchables:1.0.3@jar",
+          "name": "Searchables",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 77732,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/Searchables-forge-1.20.1-1.0.3.jar",
+            "MD5": "9f5418e9c08c18a375ef42fada4bcef2"
+          }
+        },
+        {
+          "id": "me.wesley1808:servercore:1.5.2+1.20.1@jar",
+          "name": "ServerCore",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1508496,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/servercore-forge-1.5.2+1.20.1.jar",
+            "MD5": "7ba2ff373f4f1a44a01513c49a2e8b65"
+          }
+        },
+        {
+          "id": "de.melanx:simplebackups:1.20.1-3.1.7@jar",
+          "name": "Simple Backups",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 40563,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/SimpleBackups-1.20.1-3.1.7.jar",
+            "MD5": "ac1d8c0acd2ffcebfe699fb4a561fc18"
+          }
+        },
+        {
+          "id": "com.hypherionmc.simplerpc.loaders:simplerpc:4.0.4@jar",
+          "name": "Simple RPC",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 713920,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/SimpleRPC-4.0.4.jar",
+            "MD5": "ec1d2917e5ed44b7467e422d1b2506d2"
+          }
+        },
+        {
+          "id": "bl4ckscor3.mod:sit:1.3.5@jar",
+          "name": "Sit",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 14510,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/sit-1.20.1-1.3.5.jar",
+            "MD5": "87f16ae5de8125e49f3740a45b3fc1c7"
+          }
+        },
+        {
+          "id": "com.possible_triangle:sliceanddice:3.4.1@jar",
+          "name": "Create Slice & Dice",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1187478,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/sliceanddice-forge-3.4.1.jar",
+            "MD5": "8a94b0b348956e2ceafdee3ac9970417"
+          }
+        },
+        {
+          "id": "com.cazsius:solcarrot:1.15.1@jar",
+          "name": "Spice of Life: Carrot Edition",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 104185,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/solcarrot-1.20.1-1.15.1.jar",
+            "MD5": "3b143c8d252b51221b5e85724c00171c"
+          }
+        },
+        {
+          "id": "net.seface:somemoreblocks:1.0.7-bp@jar",
+          "name": "Some More Blocks",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3180650,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/SomeMoreBlocks@forge-1.20.1-1.0.7-bp.jar",
+            "MD5": "2006a0c53d228c7df91127902a0f179c"
+          }
+        },
+        {
+          "id": "net.p3pp3rf1y:sophisticatedbackpacks:3.24.1.1333@jar",
+          "name": "Sophisticated Backpacks",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 970518,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/sophisticatedbackpacks-1.20.1-3.24.1.1333.jar",
+            "MD5": "6918f027968a5e376e607c0e6e9d4fd4"
+          }
+        },
+        {
+          "id": "net.p3pp3rf1y:sophisticatedcore:1.2.84.1117@jar",
+          "name": "Sophisticated Core",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1341163,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/sophisticatedcore-1.20.1-1.2.84.1117.jar",
+            "MD5": "bf8a45bd4294c012f2a19e62d35ca48c"
+          }
+        },
+        {
+          "id": "net.p3pp3rf1y:sophisticatedstorage:1.4.1.1265@jar",
+          "name": "Sophisticated Storage",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1665582,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/sophisticatedstorage-1.20.1-1.4.1.1265.jar",
+            "MD5": "f522e730620c3ea0c66ec840bb2857bf"
+          }
+        },
+        {
+          "id": "me.lucko:spark:1.10.53@jar",
+          "name": "Spark",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3114590,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/spark-1.10.53-forge.jar",
+            "MD5": "95dcd3b5400cc5eb5d0478a744e6ef98"
+          }
+        },
+        {
+          "id": "com.ldtteam:structurize:1.20.1-1.0.742-RELEASE@jar",
+          "name": "Structurize",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1047138,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/structurize-1.20.1-1.0.742-RELEASE.jar",
+            "MD5": "66506b9784addd5bf058043a5961ee09"
+          }
+        },
+        {
+          "id": "com.supermartijn642.configlib:supermartijn642configlib:1.1.8@jar",
+          "name": "SuperMartijn642's Config Library",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 206584,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/supermartijn642configlib-1.1.8-forge-mc1.20.jar",
+            "MD5": "cbece61946d4e059e90806c19dd66082"
+          }
+        },
+        {
+          "id": "com.supermartijn642.core:supermartijn642corelib:1.1.18@jar",
+          "name": "SuperMartijn642's Core Lib",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 515362,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/supermartijn642corelib-1.1.18-forge-mc1.20.1.jar",
+            "MD5": "6559d43627646f16fbe02de085e98d5c"
+          }
+        },
+        {
+          "id": "terrablender.core:terrablender:3.0.1.10@jar",
+          "name": "TerraBlender",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 107533,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/TerraBlender-forge-1.20.1-3.0.1.10.jar",
+            "MD5": "1f88ad1b2e0d196f0caf7c03a4abf893"
+          }
+        },
+        {
+          "id": "com.haoict:tiab:4.0.4-mc1.20.1@jar",
+          "name": "Time In A Bottle",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 56125,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/time-in-a-bottle-4.0.4-mc1.20.1.jar",
+            "MD5": "2f0c560b31af5216ffa6dd8694e40035"
+          }
+        },
+        {
+          "id": "net.xalcon:torchmaster:20.1.9@jar",
+          "name": "Torchmaster",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 119348,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/torchmaster-20.1.9.jar",
+            "MD5": "5ccfbdd3ad8436df3b99967e746ac2cd"
+          }
+        },
+        {
+          "id": "de.cristelknight999:t_and_t:1.10.2@jar",
+          "name": "Towns and Towers",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2864275,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/Towns-and-Towers-1.12-Fabric+Forge.jar",
+            "MD5": "237a2186d2482856f67c638c06489fb8"
+          }
+        },
+        {
+          "id": "com.supermartijn642:trashcans:1.0.18b@jar",
+          "name": "Trash Cans",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 158164,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/trashcans-1.0.18b-forge-mc1.20.jar",
+            "MD5": "96b30739859465a3a3f8d1d4a6c9d48c"
+          }
+        },
+        {
+          "id": "net.blay09.mods:trashslot:15.1.2@jar",
+          "name": "TrashSlot",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 117791,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/trashslot-forge-1.20-15.1.2.jar",
+            "MD5": "e1df6b412a4c22894967ba42beb347be"
+          }
+        },
+        {
+          "id": "de.maxhenkel:voicechat:1.20.1-2.5.35@jar",
+          "name": "Simple Voice Chat",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 8646989,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/voicechat-forge-1.20.1-2.5.35.jar",
+            "MD5": "35334e72794c1b612bb9b2290dd8a27c"
+          }
+        },
+        {
+          "id": "net.blay09.mods:waystones:14.1.17@jar",
+          "name": "Waystones",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 518286,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/waystones-forge-1.20.1-14.1.17.jar",
+            "MD5": "c0991381d238b6e1ba9526132b8a9a7c"
+          }
+        },
+        {
+          "id": "xaeroplus:xaeroplus:2.28.1@jar",
+          "name": "XaeroPlus",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 6613050,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/XaeroPlus-2.28.1+forge-1.20.1-WM1.39.12-MM25.2.10.jar",
+            "MD5": "e7131ade901728b1086adb191a3d70e6"
+          }
+        },
+        {
+          "id": "xaero.minimap:xaerominimap:25.2.10@jar",
+          "name": "Xaero's Minimap",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1723029,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/Xaeros_Minimap_25.2.10_Forge_1.20.jar",
+            "MD5": "2b2bfaf3a1872b83c57aaa51c73f10d9"
+          }
+        },
+        {
+          "id": "fr.shoqapik:w2w2:1.0@jar",
+          "name": "Xaero's Map - Waystones Compability",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 325574,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/xaeros_waystones_compability-1.0.jar",
+            "MD5": "79bff42d6b63942c8f8cb3d11aa4bcec"
+          }
+        },
+        {
+          "id": "xaero.map:xaeroworldmap:1.39.12@jar",
+          "name": "Xaero's World Map",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 960799,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/XaerosWorldMap_1.39.12_Forge_1.20.jar",
+            "MD5": "002d9a661be7e982db177d7b0fc8d49e"
+          }
+        },
+        {
+          "id": "com.yungnickyoung.minecraft:yungsapi:1.20-Forge-4.0.6@jar",
+          "name": "YUNG's API",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 370524,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/YungsApi-1.20-Forge-4.0.6.jar",
+            "MD5": "fe79f43dba8edbb8ede99f4e358e5b0c"
+          }
+        },
+        {
+          "id": "com.yungnickyoung.minecraft:bettercaves:1.20.1-Forge-2.0.4@jar",
+          "name": "YUNG's Better Caves",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 401201,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/YungsBetterCaves-1.20.1-Forge-2.0.4.jar",
+            "MD5": "912630cb67c8dbaf8134cc4a9f6ff015"
+          }
+        },
+        {
+          "id": "com.yungnickyoung.minecraft:betterdungeons:1.20-Forge-4.0.4@jar",
+          "name": "YUNG's Better Dungeons",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 792381,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/YungsBetterDungeons-1.20-Forge-4.0.4.jar",
+            "MD5": "2de2f1be8f528ad139003bb5c73d49f3"
+          }
+        },
+        {
+          "id": "com.yungnickyoung.minecraft:betterendisland:1.20-Forge-2.0.6@jar",
+          "name": "YUNG's Better End Island",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 387111,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/YungsBetterEndIsland-1.20-Forge-2.0.6.jar",
+            "MD5": "7f5ed661e5478668a91ea199fba75fb3"
+          }
+        },
+        {
+          "id": "com.yungnickyoung.minecraft:bettermineshafts:1.20-Forge-4.0.4@jar",
+          "name": "YUNG's Better Mineshafts",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 492998,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/YungsBetterMineshafts-1.20-Forge-4.0.4.jar",
+            "MD5": "fe8d205c98cb02840d46646fb7cf5ab8"
+          }
+        },
+        {
+          "id": "com.yungnickyoung.minecraft:betterfortresses:1.20-Forge-2.0.6@jar",
+          "name": "YUNG's Better Nether Fortresses",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 619255,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/YungsBetterNetherFortresses-1.20-Forge-2.0.6.jar",
+            "MD5": "8f0011690923efb6e2d59514181f0bc9"
+          }
+        },
+        {
+          "id": "com.yungnickyoung.minecraft:betterstrongholds:1.20-Forge-4.0.3@jar",
+          "name": "YUNG's Better Strongholds",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 473564,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/YungsBetterStrongholds-1.20-Forge-4.0.3.jar",
+            "MD5": "8c00ed5d2bab232040a1d4d0ef746ae6"
+          }
+        },
+        {
+          "id": "com.yungnickyoung.minecraft:yungsbridges:1.20-Forge-4.0.3@jar",
+          "name": "YUNG's Bridges",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 136236,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/YungsBridges-1.20-Forge-4.0.3.jar",
+            "MD5": "9c39322cd0e271980b4449bc42fc17ac"
+          }
+        },
+        {
+          "id": "com.yungnickyoung.minecraft:yungsextras:1.20-Forge-4.0.3@jar",
+          "name": "YUNG's Extras",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 200341,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/forgemods/required/YungsExtras-1.20-Forge-4.0.3.jar",
+            "MD5": "6a592ed7502e13d840fa25587325202d"
+          }
+        },
+        {
+          "id": "server-entries.toml",
+          "name": "server-entries.toml",
+          "type": "File",
+          "artifact": {
+            "size": 150,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/files/simple-rpc/server-entries.toml",
+            "MD5": "c1d25129313571d7ffa9aa2654338ec2",
+            "path": "simple-rpc/server-entries.toml"
+          }
+        },
+        {
+          "id": "simple-rpc.toml",
+          "name": "simple-rpc.toml",
+          "type": "File",
+          "artifact": {
+            "size": 18762,
+            "url": "http://downloads.epicraft.tech/servers/Epicraft-1.20.1/files/simple-rpc/simple-rpc.toml",
+            "MD5": "c0e6264b35854fb83679f3ce1d5f1b31",
+            "path": "simple-rpc/simple-rpc.toml"
+          }
+        }
+      ]
+    }
+  ]
+}
