@@ -253,15 +253,25 @@ const refreshServerStatus = async (fade = false) => {
         loggerLanding.warn('Unable to refresh server status, assuming offline.')
         loggerLanding.debug(err)
     }
+    const landingPlayerLabel = document.getElementById('landingPlayerLabel')
+    const playerCount = document.getElementById('player_count')
     if(fade){
         $('#server_status_wrapper').fadeOut(250, () => {
-            document.getElementById('landingPlayerLabel').innerHTML = pLabel
-            document.getElementById('player_count').innerHTML = pVal
+            if (landingPlayerLabel) {
+                landingPlayerLabel.innerHTML = pLabel
+            }
+            if (playerCount) {
+                playerCount.innerHTML = pVal
+            }
             $('#server_status_wrapper').fadeIn(500)
         })
     } else {
-        document.getElementById('landingPlayerLabel').innerHTML = pLabel
-        document.getElementById('player_count').innerHTML = pVal
+        if (landingPlayerLabel) {
+            landingPlayerLabel.innerHTML = pLabel
+        }
+        if (playerCount) {
+            playerCount.innerHTML = pVal
+        }
     }
     
 }
@@ -704,23 +714,26 @@ function slide_(up){
 }
 
 // Bind news button.
-document.getElementById('newsButton').onclick = () => {
-    // Toggle tabbing.
-    if(newsActive){
-        $('#landingContainer *').removeAttr('tabindex')
-        $('#newsContainer *').attr('tabindex', '-1')
-    } else {
-        $('#landingContainer *').attr('tabindex', '-1')
-        $('#newsContainer, #newsContainer *, #lower, #lower #center *').removeAttr('tabindex')
-        if(newsAlertShown){
-            $('#newsButtonAlert').fadeOut(2000)
-            newsAlertShown = false
-            ConfigManager.setNewsCacheDismissed(true)
-            ConfigManager.save()
+const newsButton = document.getElementById('newsButton')
+if (newsButton) {
+    newsButton.onclick = () => {
+        // Toggle tabbing.
+        if(newsActive){
+            $('#landingContainer *').removeAttr('tabindex')
+            $('#newsContainer *').attr('tabindex', '-1')
+        } else {
+            $('#landingContainer *').attr('tabindex', '-1')
+            $('#newsContainer, #newsContainer *, #lower, #lower #center *').removeAttr('tabindex')
+            if(newsAlertShown){
+                $('#newsButtonAlert').fadeOut(2000)
+                newsAlertShown = false
+                ConfigManager.setNewsCacheDismissed(true)
+                ConfigManager.save()
+            }
         }
+        slide_(!newsActive)
+        newsActive = !newsActive
     }
-    slide_(!newsActive)
-    newsActive = !newsActive
 }
 
 // Array to store article meta.
@@ -738,14 +751,18 @@ function setNewsLoading(val){
     if(val){
         const nLStr = Lang.queryJS('landing.news.checking')
         let dotStr = '..'
-        nELoadSpan.innerHTML = nLStr + dotStr
+        if (nELoadSpan) {
+            nELoadSpan.innerHTML = nLStr + dotStr
+        }
         newsLoadingListener = setInterval(() => {
             if(dotStr.length >= 3){
                 dotStr = ''
             } else {
                 dotStr += '.'
             }
-            nELoadSpan.innerHTML = nLStr + dotStr
+            if (nELoadSpan) {
+                nELoadSpan.innerHTML = nLStr + dotStr
+            }
         }, 750)
     } else {
         if(newsLoadingListener != null){
@@ -756,18 +773,23 @@ function setNewsLoading(val){
 }
 
 // Bind retry button.
-newsErrorRetry.onclick = () => {
-    $('#newsErrorFailed').fadeOut(250, () => {
-        initNews()
-        $('#newsErrorLoading').fadeIn(250)
-    })
+const newsErrorRetry = document.getElementById('newsErrorRetry')
+if (newsErrorRetry) {
+    newsErrorRetry.onclick = () => {
+        $('#newsErrorFailed').fadeOut(250, () => {
+            initNews()
+            $('#newsErrorLoading').fadeIn(250)
+        })
+    }
 }
 
-newsArticleContentScrollable.onscroll = (e) => {
-    if(e.target.scrollTop > Number.parseFloat($('.newsArticleSpacerTop').css('height'))){
-        newsContent.setAttribute('scrolled', '')
-    } else {
-        newsContent.removeAttribute('scrolled')
+if (newsArticleContentScrollable) {
+    newsArticleContentScrollable.onscroll = (e) => {
+        if(e.target.scrollTop > Number.parseFloat($('.newsArticleSpacerTop').css('height'))){
+            newsContent.setAttribute('scrolled', '')
+        } else {
+            newsContent.removeAttribute('scrolled')
+        }
     }
 }
 
@@ -795,7 +817,7 @@ let newsAlertShown = false
  */
 function showNewsAlert(){
     newsAlertShown = true
-    $(newsButtonAlert).fadeIn(250)
+    $('#newsButtonAlert').fadeIn(250)
 }
 
 async function digestMessage(str) {
@@ -894,8 +916,14 @@ async function initNews(){
             displayArticle(newsArr[nxtArt], nxtArt+1)
         }
 
-        document.getElementById('newsNavigateRight').onclick = () => { switchHandler(true) }
-        document.getElementById('newsNavigateLeft').onclick = () => { switchHandler(false) }
+        const newsNavigateRight = document.getElementById('newsNavigateRight')
+        const newsNavigateLeft = document.getElementById('newsNavigateLeft')
+        if (newsNavigateRight) {
+            newsNavigateRight.onclick = () => { switchHandler(true) }
+        }
+        if (newsNavigateLeft) {
+            newsNavigateLeft.onclick = () => { switchHandler(false) }
+        }
         await $('#newsErrorContainer').fadeOut(250).promise()
         displayArticle(newsArr[0], 1)
         await $('#newsContent').fadeIn(250).promise()
@@ -912,7 +940,10 @@ async function initNews(){
 document.addEventListener('keydown', (e) => {
     if(newsActive){
         if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
-            document.getElementById(e.key === 'ArrowRight' ? 'newsNavigateRight' : 'newsNavigateLeft').click()
+            const navElement = document.getElementById(e.key === 'ArrowRight' ? 'newsNavigateRight' : 'newsNavigateLeft')
+            if (navElement) {
+                navElement.click()
+            }
         }
         // Interferes with scrolling an article using the down arrow.
         // Not sure of a straight forward solution at this point.
@@ -922,7 +953,10 @@ document.addEventListener('keydown', (e) => {
     } else {
         if(getCurrentView() === VIEWS.landing){
             if(e.key === 'ArrowUp'){
-                document.getElementById('newsButton').click()
+                const newsBtn = document.getElementById('newsButton')
+                if (newsBtn) {
+                    newsBtn.click()
+                }
             }
         }
     }
@@ -935,21 +969,35 @@ document.addEventListener('keydown', (e) => {
  * @param {number} index The article index.
  */
 function displayArticle(articleObject, index){
-    newsArticleTitle.innerHTML = articleObject.title
-    newsArticleTitle.href = articleObject.link
-    newsArticleAuthor.innerHTML = 'by ' + articleObject.author
-    newsArticleDate.innerHTML = articleObject.date
-    newsArticleComments.innerHTML = articleObject.comments
-    newsArticleComments.href = articleObject.commentsLink
-    newsArticleContentScrollable.innerHTML = '<div id="newsArticleContentWrapper"><div class="newsArticleSpacerTop"></div>' + articleObject.content + '<div class="newsArticleSpacerBot"></div></div>'
-    Array.from(newsArticleContentScrollable.getElementsByClassName('bbCodeSpoilerButton')).forEach(v => {
-        v.onclick = () => {
-            const text = v.parentElement.getElementsByClassName('bbCodeSpoilerText')[0]
-            text.style.display = text.style.display === 'block' ? 'none' : 'block'
-        }
-    })
-    newsNavigationStatus.innerHTML = Lang.query('ejs.landing.newsNavigationStatus', {currentPage: index, totalPages: newsArr.length})
-    newsContent.setAttribute('article', index-1)
+    if (newsArticleTitle) {
+        newsArticleTitle.innerHTML = articleObject.title
+        newsArticleTitle.href = articleObject.link
+    }
+    if (newsArticleAuthor) {
+        newsArticleAuthor.innerHTML = 'by ' + articleObject.author
+    }
+    if (newsArticleDate) {
+        newsArticleDate.innerHTML = articleObject.date
+    }
+    if (newsArticleComments) {
+        newsArticleComments.innerHTML = articleObject.comments
+        newsArticleComments.href = articleObject.commentsLink
+    }
+    if (newsArticleContentScrollable) {
+        newsArticleContentScrollable.innerHTML = '<div id="newsArticleContentWrapper"><div class="newsArticleSpacerTop"></div>' + articleObject.content + '<div class="newsArticleSpacerBot"></div></div>'
+        Array.from(newsArticleContentScrollable.getElementsByClassName('bbCodeSpoilerButton')).forEach(v => {
+            v.onclick = () => {
+                const text = v.parentElement.getElementsByClassName('bbCodeSpoilerText')[0]
+                text.style.display = text.style.display === 'block' ? 'none' : 'block'
+            }
+        })
+    }
+    if (newsNavigationStatus) {
+        newsNavigationStatus.innerHTML = Lang.query('ejs.landing.newsNavigationStatus', {currentPage: index, totalPages: newsArr.length})
+    }
+    if (newsContent) {
+        newsContent.setAttribute('article', index-1)
+    }
 }
 
 /**
