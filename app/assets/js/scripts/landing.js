@@ -284,23 +284,23 @@ const refreshServerStatus = async (fade = false) => {
 // let mojangStatusListener = setInterval(() => refreshMojangStatuses(true), 60*60*1000)
 // // Set refresh rate to once every 5 minutes.
 // let serverStatusListener = setInterval(() => refreshServerStatus(true), 300000)
-//
-// /**
-//  * Shows an error overlay, toggles off the launch area.
-//  *
-//  * @param {string} title The overlay title.
-//  * @param {string} desc The overlay description.
-//  */
-// function showLaunchFailure(title, desc){
-//     setOverlayContent(
-//         title,
-//         desc,
-//         Lang.queryJS('landing.launch.okay')
-//     )
-//     setOverlayHandler(null)
-//     toggleOverlay(true)
-//     toggleLaunchArea(false)
-// }
+
+/**
+ * Shows an error overlay, toggles off the launch area.
+ *
+ * @param {string} title The overlay title.
+ * @param {string} desc The overlay description.
+ */
+function showLaunchFailure(title, desc){
+    setOverlayContent(
+        title,
+        desc,
+        Lang.queryJS('landing.launch.okay')
+    )
+    setOverlayHandler(null)
+    toggleOverlay(true)
+    toggleLaunchArea(false)
+}
 
 /* System (Java) Scan */
 
@@ -550,9 +550,9 @@ async function dlAsync(login = true) {
 
     setLaunchDetails(Lang.queryJS('landing.dlAsync.preparingToLaunch'))
 
-    /*const mojangIndexProcessor = new MojangIndexProcessor(
+    const mojangIndexProcessor = new MojangIndexProcessor(
         ConfigManager.getCommonDirectory(),
-        serv.rawServer.minecraftVersion)*/
+        serv.rawServer.minecraftVersion)
     const distributionIndexProcessor = new DistributionIndexProcessor(
         ConfigManager.getCommonDirectory(),
         distro,
@@ -1016,7 +1016,16 @@ async function loadNews(){
     const promise = new Promise((resolve, reject) => {
         
         const newsFeed = distroData.rawDistribution.rss
-        const newsHost = new URL(newsFeed).origin + '/'
+        let newsHost
+        try {
+            newsHost = new URL(newsFeed).origin + '/'
+        } catch (e) {
+            loggerLanding.error('Invalid RSS URL:', newsFeed)
+            resolve({
+                articles: null
+            })
+            return
+        }
         $.ajax({
             url: newsFeed,
             success: (data) => {
