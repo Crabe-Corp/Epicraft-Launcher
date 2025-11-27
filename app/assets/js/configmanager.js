@@ -47,9 +47,10 @@ exports.getAbsoluteMinRAM = function(ram){
     if(ram?.minimum != null) {
         return ram.minimum/1024
     } else {
-        // Legacy behavior
+        // Legacy behavior: ensure minimum is at least 6GB when system has >= 6GB
         const mem = os.totalmem()
-        return mem >= (6*1073741824) ? 3 : 2
+        // Retourne la valeur minimale en gigaoctets (entier)
+        return mem >= (6*1073741824) ? 6 : 2
     }
 }
 
@@ -63,9 +64,10 @@ function resolveSelectedRAM(ram) {
     if(ram?.recommended != null) {
         return `${ram.recommended}M`
     } else {
-        // Legacy behavior
+        // Legacy behavior: return at least 6G minimum for machines with >= 6GB RAM
         const mem = os.totalmem()
-        return mem >= (8*1073741824) ? '4G' : (mem >= (6*1073741824) ? '3G' : '2G')
+        // Si la machine a >= 6GB, on propose 6G par défaut; sinon on garde 2G
+        return mem >= (6*1073741824) ? '6G' : '2G'
     }
 }
 

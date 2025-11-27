@@ -1246,8 +1246,16 @@ function bindRangeSlider(){
         const track = v.getElementsByClassName('rangeSliderTrack')[0]
 
         // Set the initial slider value.
-        const value = v.getAttribute('value')
+        // Read and clamp the initial value to the declared min/max so the
+        // slider cannot display a value outside its allowed range.
+        const rawValue = Number(v.getAttribute('value'))
         const sliderMeta = calculateRangeSliderMeta(v)
+        let value = Number.isFinite(rawValue) ? rawValue : sliderMeta.min
+        if(value < sliderMeta.min) value = sliderMeta.min
+        if(value > sliderMeta.max) value = sliderMeta.max
+
+        // Ensure the attribute stores the clamped value before rendering.
+        v.setAttribute('value', value)
 
         updateRangedSlider(v, value, ((value-sliderMeta.min)/sliderMeta.step)*sliderMeta.inc)
 
