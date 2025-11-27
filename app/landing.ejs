@@ -8,6 +8,9 @@
             </div> -->
         </div>
         <div id="content">
+            <div id="middleContent">
+                <div id="md-container" class="markdown-body"></div>
+            </div>
         </div>
         <div id="right">
             <div id="rightContainer">
@@ -56,9 +59,6 @@
         </div>
     </div>
     <div id="center">
-        <div id="middleContent">
-            <div id="md-container" class="markdown-body"></div>
-        </div>
     </div>
     <div id="lower">
         <div id="right">
@@ -68,11 +68,11 @@
                     <button id="server_selection_button" class="bot_label" style="display:none"><%- lang('landing.launchButtonPlaceholder') %></button>
                 </div>
                 <div id="launch_details">
-                    <div class="launch_details_left">
+                    <div id="launch_details_left">
                         <span id="launch_progress_label">0%</span>
                         <div class="bot_divider"></div>
                     </div>
-                    <div class="launch_details_right">
+                    <div id="launch_details_right">
                         <progress id="launch_progress" value="0" max="100"></progress>
                         <span id="launch_details_text" class="bot_label"><%- lang('landing.launchDetails') %></span>
                     </div>
@@ -81,4 +81,5 @@
         </div>
     </div>
     <script src="./assets/js/scripts/landing.js"></script>
+    <script src="./assets/js/scripts/markdownloader.js"></script>
 </div>
