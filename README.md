@@ -49,6 +49,6 @@ Le launcher est un fork du HeliosLauncher.
 
 source:
 
-[wiki]: https://github.com/dscalzi/HeliosLauncher/wiki
-[nebula]: https://github.com/dscalzi/Nebula
-[nodejs]: https://nodejs.org/en/
+[Helios (Fork)](https://github.com/dscalzi/HeliosLauncher/wiki),
+[Nebula (Distro.json)](https://github.com/dscalzi/Nebula),
+[nodejs](https://nodejs.org/en/)
