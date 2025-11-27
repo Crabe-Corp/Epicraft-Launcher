@@ -1,4 +1,5 @@
 require('markdown-it')
+const DOMPurify = require('dompurify')
 const md = window.markdownit()
 
 async function loadMarkdown(url) {
@@ -7,7 +8,10 @@ async function loadMarkdown(url) {
     const raw = await res.text()
     const html = md.render(raw)
     const clean = DOMPurify.sanitize(html)
-    document.getElementById('md-container').innerHTML = clean
+    const container = document.getElementById('md-container')
+    if (container) {
+        container.innerHTML = clean
+    }
 }
 
 loadMarkdown('https://github.com/Crabe-Corp/Epicraft-Launcher/blob/dev/README.md').catch(console.error)
