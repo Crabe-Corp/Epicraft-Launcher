@@ -342,14 +342,14 @@ settingsNavDone.onclick = () => {
 const msftLoginLogger = LoggerUtil.getLogger('Microsoft Login')
 const msftLogoutLogger = LoggerUtil.getLogger('Microsoft Logout')
 
-// Bind the add mojang account button.
-document.getElementById('settingsAddMojangAccount').onclick = (e) => {
-    switchView(getCurrentView(), VIEWS.login, 500, 500, () => {
-        loginViewOnCancel = VIEWS.settings
-        loginViewOnSuccess = VIEWS.settings
-        loginCancelEnabled(true)
-    })
-}
+// // Bind the add mojang account button.
+// document.getElementById('settingsAddMojangAccount').onclick = (e) => {
+//     switchView(getCurrentView(), VIEWS.login, 500, 500, () => {
+//         loginViewOnCancel = VIEWS.settings
+//         loginViewOnSuccess = VIEWS.settings
+//         loginCancelEnabled(true)
+//     })
+// }
 
 // Bind the add microsoft account button.
 document.getElementById('settingsAddMicrosoftAccount').onclick = (e) => {
@@ -519,23 +519,25 @@ function processLogOut(val, isLastAccount){
             ipcRenderer.send(MSFT_OPCODE.OPEN_LOGOUT, uuid, isLastAccount)
         })
     } else {
-        AuthManager.removeMojangAccount(uuid).then(() => {
-            if(!isLastAccount && uuid === prevSelAcc.uuid){
-                const selAcc = ConfigManager.getSelectedAccount()
-                refreshAuthAccountSelected(selAcc.uuid)
-                updateSelectedAccount(selAcc)
-                validateSelectedAccount()
-            }
-            if(isLastAccount) {
-                loginOptionsCancelEnabled(false)
-                loginOptionsViewOnLoginSuccess = VIEWS.settings
-                loginOptionsViewOnLoginCancel = VIEWS.loginOptions
-                switchView(getCurrentView(), VIEWS.loginOptions)
-            }
-        })
-        $(parent).fadeOut(250, () => {
-            parent.remove()
-        })
+        // MOJANG LOGIN DISABLED - Mojang accounts cannot be removed via UI
+        console.log('Mojang account removal is disabled. Account type:', targetAcc.type)
+        // AuthManager.removeMojangAccount(uuid).then(() => {
+        //     if(!isLastAccount && uuid === prevSelAcc.uuid){
+        //         const selAcc = ConfigManager.getSelectedAccount()
+        //         refreshAuthAccountSelected(selAcc.uuid)
+        //         updateSelectedAccount(selAcc)
+        //         validateSelectedAccount()
+        //     }
+        //     if(isLastAccount) {
+        //         loginOptionsCancelEnabled(false)
+        //         loginOptionsViewOnLoginSuccess = VIEWS.settings
+        //         loginOptionsViewOnLoginCancel = VIEWS.loginOptions
+        //         switchView(getCurrentView(), VIEWS.loginOptions)
+        //     }
+        // })
+        // $(parent).fadeOut(250, () => {
+        //     parent.remove()
+        // })
     }
 }
 
@@ -619,7 +621,7 @@ function refreshAuthAccountSelected(uuid){
 }
 
 const settingsCurrentMicrosoftAccounts = document.getElementById('settingsCurrentMicrosoftAccounts')
-const settingsCurrentMojangAccounts = document.getElementById('settingsCurrentMojangAccounts')
+// const settingsCurrentMojangAccounts = document.getElementById('settingsCurrentMojangAccounts')
 
 /**
  * Add auth account elements for each one stored in the authentication database.
@@ -633,10 +635,16 @@ function populateAuthAccounts(){
     const selectedUUID = ConfigManager.getSelectedAccount().uuid
 
     let microsoftAuthAccountStr = ''
-    let mojangAuthAccountStr = ''
+    // let mojangAuthAccountStr = '' // REMOVED - Mojang login disabled
 
     authKeys.forEach((val) => {
         const acc = authAccounts[val]
+
+        // MOJANG LOGIN DISABLED - Skip Mojang accounts in the UI
+        if(acc.type !== 'microsoft') {
+            console.log('Skipping non-Microsoft account:', acc.displayName, '(type:', acc.type + ')')
+            return
+        }
 
         const accHtml = `<div class="settingsAuthAccount" uuid="${acc.uuid}">
             <div class="settingsAuthAccountLeft">
@@ -662,16 +670,18 @@ function populateAuthAccounts(){
             </div>
         </div>`
 
-        if(acc.type === 'microsoft') {
-            microsoftAuthAccountStr += accHtml
-        } else {
-            mojangAuthAccountStr += accHtml
-        }
+        microsoftAuthAccountStr += accHtml
+        // Old code that separated Microsoft and Mojang accounts:
+        // if(acc.type === 'microsoft') {
+        //     microsoftAuthAccountStr += accHtml
+        // } else {
+        //     mojangAuthAccountStr += accHtml
+        // }
 
     })
 
     settingsCurrentMicrosoftAccounts.innerHTML = microsoftAuthAccountStr
-    settingsCurrentMojangAccounts.innerHTML = mojangAuthAccountStr
+    // settingsCurrentMojangAccounts.innerHTML = mojangAuthAccountStr
 }
 
 /**
