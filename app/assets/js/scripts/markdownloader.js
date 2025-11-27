@@ -1,12 +1,22 @@
-require('markdown-it')
+const MarkdownIt = require('markdown-it')
 const DOMPurify = require('dompurify')
-const md = window.markdownit()
+const md = new MarkdownIt({ html: true, linkify: true, breaks: true })
 
 async function loadMarkdown(url) {
     const res = await fetch(url)
     if (!res.ok) throw new Error('Impossible de charger le markdown: ' + res.status)
     const raw = await res.text()
-    const html = md.render(raw)
+    
+    // Fix relative image paths
+    const baseUrl = url.substring(0, url.lastIndexOf('/') + 1)
+    const fixedRaw = raw.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, imgUrl) => {
+        if (!imgUrl.startsWith('http') && !imgUrl.startsWith('//')) {
+            return `![${alt}](${baseUrl}${imgUrl})`
+        }
+        return match
+    })
+
+    const html = md.render(fixedRaw)
     const clean = DOMPurify.sanitize(html)
     const container = document.getElementById('md-container')
     if (container) {
@@ -14,4 +24,4 @@ async function loadMarkdown(url) {
     }
 }
 
-loadMarkdown('https://github.com/Crabe-Corp/Epicraft-Launcher/blob/dev/README.md').catch(console.error)
+loadMarkdown('https://raw.githubusercontent.com/Crabe-Corp/Epicraft-Launcher/dev/README.md').catch(console.error)

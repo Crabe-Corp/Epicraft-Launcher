@@ -124,6 +124,7 @@ function initSettingsValidators(){
  */
 async function initSettingsValues(){
     const sEls = document.getElementById('settingsContainer').querySelectorAll('[cValue]')
+    const promises = []
 
     for(const v of sEls) {
         const cVal = v.getAttribute('cValue')
@@ -139,7 +140,7 @@ async function initSettingsValues(){
                     // Special Conditions
                     if(cVal === 'JavaExecutable'){
                         v.value = gFn.apply(null, gFnOpts)
-                        await populateJavaExecDetails(v.value)
+                        promises.push(populateJavaExecDetails(v.value))
                     } else if (cVal === 'DataDirectory'){
                         v.value = gFn.apply(null, gFnOpts)
                     } else if(cVal === 'JVMOptions'){
@@ -169,7 +170,7 @@ async function initSettingsValues(){
             }
         }
     }
-
+    await Promise.all(promises)
 }
 
 /**
@@ -1085,7 +1086,7 @@ async function loadSelectedServerOnModsTab(){
 
     for(const el of document.getElementsByClassName('settingsSelServContent')) {
         el.innerHTML = `
-            <img class="serverListingImg" src="${serv.rawServer.icon}"/>
+            <img class="serverListingImg" src="${serv.rawServer.icon || 'assets/images/SealCircle.png'}"/>
             <div class="serverListingDetails">
                 <span class="serverListingName">${serv.rawServer.name}</span>
                 <span class="serverListingDescription">${serv.rawServer.description}</span>
@@ -1140,14 +1141,16 @@ function animateSettingsTabRefresh(){
  * Prepare the Mods tab for display.
  */
 async function prepareModsTab(first){
-    await resolveModsForUI()
-    await resolveDropinModsForUI()
-    await resolveShaderpacksForUI()
+    await Promise.all([
+        resolveModsForUI(),
+        resolveDropinModsForUI(),
+        resolveShaderpacksForUI(),
+        loadSelectedServerOnModsTab()
+    ])
     bindDropinModsRemoveButton()
     bindDropinModFileSystemButton()
     bindShaderpackButton()
     bindModsToggleSwitch()
-    await loadSelectedServerOnModsTab()
 }
 
 /**
@@ -1588,13 +1591,16 @@ async function prepareSettings(first = false) {
         setupSettingsTabs()
         initSettingsValidators()
         prepareUpdateTab()
-    } else {
-        await prepareModsTab()
     }
+
+    const pMods = !first ? prepareModsTab() : Promise.resolve()
+
     await initSettingsValues()
     prepareAccountsTab()
     await prepareJavaTab()
     prepareAboutTab()
+    
+    await pMods
 }
 
 // Prepare the settings UI on startup.

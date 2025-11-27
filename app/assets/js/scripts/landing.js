@@ -129,8 +129,9 @@ document.getElementById('launch_button').addEventListener('click', async e => {
 
 // Bind settings button
 document.getElementById('settingsMediaButton').onclick = async e => {
-    await prepareSettings()
-    switchView(getCurrentView(), VIEWS.settings)
+    switchView(getCurrentView(), VIEWS.settings, 500, 500, async () => {
+        await prepareSettings()
+    })
 }
 
 // Bind avatar overlay button.
