@@ -1,11 +1,11 @@
 {
   "name": "epicraft-launcher",
-  "version": "2.2.1",
+  "version": "1.0.0",
   "productName": "Epicraft Launcher",
-  "description": "Modded Minecraft Launcher",
+  "description": "Modded Minecraft Launcher for Epicraft !",
   "author": "Crab Corp (https://github.com/Crabe-Corp/Epicraft-Launcher)",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/dscalzi/HeliosLauncher",
+  "homepage": "https://github.com/Crabe-Corp/Epicraft-Launcher",
   "bugs": {
     "url": "https://github.com/Crabe-Corp/Epicraft-Launcher/issues"
   },
@@ -46,6 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dscalzi/HeliosLauncher.git"
+    "url": "git+https://github.com/Crabe-Corp/Epicraft-Launcher.git"
   }
 }

@@ -11,8 +11,8 @@ mediaYouTubeURL = "#"
 mediaDiscordURL = "https://discord.gg/HWJnZ9UmAf"
 
 [ejs.settings]
-sourceGithubLink = "https://github.com/dscalZi/HeliosLauncher"
-supportLink = "https://github.com/dscalZi/HeliosLauncher/issues"
+sourceGithubLink = "https://github.com/Crabe-Corp/Epicraft-Launcher"
+supportLink = "https://github.com/Crabe-Corp/Epicraft-Launcher/issues"
 
 [ejs.welcome]
 welcomeHeader = "Bienvenue sur Epicraft !"
