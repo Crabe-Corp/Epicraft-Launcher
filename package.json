@@ -3,11 +3,11 @@
   "version": "2.2.1",
   "productName": "Epicraft Launcher",
   "description": "Modded Minecraft Launcher",
-  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
+  "author": "Crab Corp (https://github.com/Crabe-Corp/Epicraft-Launcher)",
   "license": "UNLICENSED",
   "homepage": "https://github.com/dscalzi/HeliosLauncher",
   "bugs": {
-    "url": "https://github.com/dscalzi/HeliosLauncher/issues"
+    "url": "https://github.com/Crabe-Corp/Epicraft-Launcher/issues"
   },
   "private": true,
   "main": "index.js",
