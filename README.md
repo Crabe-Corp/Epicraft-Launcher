@@ -11,7 +11,7 @@
 
 **Prérequis système**
 
-* [Node.js][nodejs] v20
+* Node.js:v20
 
 ---
 
